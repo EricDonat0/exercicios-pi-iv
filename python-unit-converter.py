@@ -1,3 +1,5 @@
+import convert
+
 print('Conversor de Unidades: Pés, Metros, Jardas\n')
 
 #Conversion constants
@@ -25,22 +27,28 @@ def unit_converter():
     
     # Conversion
     if measurement_unit == "metro" and target_unit == "pé":
-        result = value * meters_to_feet
+        result = convert.meters_to_feet(value)
+        #result = value * meters_to_feet
 
     elif measurement_unit == "metro" and target_unit == "jarda":
-        result = value * meters_to_yards
+        result = convert.meters_to_yards(value)
+        #result = value * meters_to_yards
 
     elif measurement_unit == "jarda" and target_unit == "pé":
-        result = value * yards_to_feet
+        result = convert.yards_to_feet(value)
+        #result = value * yards_to_feet
 
     elif measurement_unit == "jarda" and target_unit == "metro":
-        result = value * yards_to_meters
+        result = convert.yards_to_meters(value)
+        #result = value * yards_to_meters
 
     elif measurement_unit == "pé" and target_unit == "metro":
-        result = value * feet_to_meters
+        result = convert.feet_to_meters(value)
+        #result = value * feet_to_meters
 
     elif measurement_unit == "pé" and target_unit == "jarda":
-        result = value * feet_to_yards
+        result = convert.feet_to_yards(value)
+        #result = value * feet_to_yards
 
     elif measurement_unit == target_unit:
         result = value
